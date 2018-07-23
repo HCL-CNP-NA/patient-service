@@ -18,7 +18,7 @@ public class PatientServiceApplication {
 	@Bean
 	RouterFunction<?> routes() {
 		return
-				route(GET("delay"), r -> ok().body(Flux.just("Hello HCL!").delayElements(Duration.ofSeconds(10)), String.class));
+				route(GET("/delay"), r -> ok().body(Flux.just("Hello HCL!").delayElements(Duration.ofSeconds(10)), String.class));
 	}
 
 	public static void main(String[] args) {
