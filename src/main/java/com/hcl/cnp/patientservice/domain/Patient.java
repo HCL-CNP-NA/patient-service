@@ -1,5 +1,8 @@
 package com.hcl.cnp.patientservice.domain;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Tech Support on 7/20/2018.
  */
@@ -8,6 +11,7 @@ public class Patient {
     private String id;
     private String firstName;
     private String lastName;
+    private List<Observation> observations = new ArrayList<>();
 
     public String getId() {
         return id;
@@ -39,5 +43,13 @@ public class Patient {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
+    }
+
+    public List<Observation> getObservations() {
+        return observations;
+    }
+
+    public void setObservations(List<Observation> observations) {
+        this.observations = observations;
     }
 }

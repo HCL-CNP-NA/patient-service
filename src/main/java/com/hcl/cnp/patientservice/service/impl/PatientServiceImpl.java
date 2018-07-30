@@ -1,13 +1,12 @@
 package com.hcl.cnp.patientservice.service.impl;
 
 import com.hcl.cnp.patientservice.domain.Patient;
+import com.hcl.cnp.patientservice.repository.PatientRepository;
 import com.hcl.cnp.patientservice.service.PatientService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Created by Tech Support on 7/20/2018.
@@ -15,17 +14,20 @@ import java.util.Optional;
 @Service
 public class PatientServiceImpl implements PatientService {
 
+    @Autowired
+    PatientRepository patientRepository;
+
     public List<Patient> findAll() {
-        return patientList;
+        return patientRepository.findAll();
     }
 
-    public Optional<Patient> findById(String id) {
-        return patientList.stream().filter(p -> p.getId().equalsIgnoreCase(id)).findAny();
+    public List<Patient> findById(String id) {
+        return patientRepository.findByPatient(id);
     }
 
-    private static final List<Patient> patientList = new ArrayList<Patient>(
-            Arrays.asList(new Patient("001", "Mario", "Avalle"),
-                    new Patient("002", "Dario", "Vega"),
-                    new Patient("003", "Raul","Lopez"))
-    );
+//    private static final List<Patient> patientList = new ArrayList<Patient>(
+//            Arrays.asList(new Patient("001", "Mario", "Avalle"),
+//                    new Patient("002", "Dario", "Vega"),
+//                    new Patient("003", "Raul","Lopez"))
+//    );
 }

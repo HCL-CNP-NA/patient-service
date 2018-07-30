@@ -1,15 +1,14 @@
 package com.hcl.cnp.patientservice.rest;
 
-import com.fasterxml.jackson.annotation.JacksonInject;
 import com.hcl.cnp.patientservice.domain.Patient;
 import com.hcl.cnp.patientservice.service.PatientService;
+import com.hcl.cnp.patientservice.service.client.ObservationServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Created by Tech Support on 7/22/2018.
@@ -19,6 +18,9 @@ public class PatientResource {
 
     @Autowired
     PatientService patientService;
+
+    @Autowired
+    ObservationServiceClient observationServiceClient;
 
     @GetMapping(path = "/test-patient")
     public String testRest() {
@@ -30,13 +32,16 @@ public class PatientResource {
         return patientService.findAll();
     }
 
-    @GetMapping(path = "/patient/{id}")
+    @GetMapping(path = "/find-one/{id}")
     public Patient findById(@PathVariable String id) {
-        Optional<Patient> patient = patientService.findById(id);
+        return patientService.findById(id).stream().findFirst().get();
+    }
 
-        if (patient.isPresent())
-            return patient.get();
-        return null;
+    @GetMapping(path = "/find-one/{id}/with-observations")
+    public Patient findWithObservations(@PathVariable("id") String id) {
+        Patient patient = patientService.findById(id).stream().findFirst().get();
+        patient.setObservations(observationServiceClient.findByPatient(id));
+        return patient;
     }
 
 }
