@@ -1,6 +1,7 @@
 package com.hcl.cnp.patientservice.service;
 
 import com.hcl.cnp.patientservice.domain.Patient;
+import com.hcl.cnp.patientservice.domain.PatientEntity;
 
 import java.util.List;
 
@@ -9,7 +10,9 @@ import java.util.List;
  */
 public interface PatientService {
 
-    List<Patient> findAll();
+    List<Patient> findAllFake();
+
+    List<PatientEntity> findAll();
 
     List<Patient> findById(String id);
 }

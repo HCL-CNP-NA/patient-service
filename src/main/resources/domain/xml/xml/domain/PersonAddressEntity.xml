@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.hcl.cnp.patientservice.domain.PersonAddressEntity">
+        <table name="person_address" schema="openmrs" catalog=""/>
+        <attributes>
+            <id name="personAddressId">
+                <column name="person_address_id"/>
+            </id>
+            <basic name="preferred">
+                <column name="preferred"/>
+            </basic>
+            <basic name="address1">
+                <column name="address1"/>
+            </basic>
+            <basic name="address2">
+                <column name="address2"/>
+            </basic>
+            <basic name="cityVillage">
+                <column name="city_village"/>
+            </basic>
+            <basic name="stateProvince">
+                <column name="state_province"/>
+            </basic>
+            <basic name="postalCode">
+                <column name="postal_code"/>
+            </basic>
+            <basic name="country">
+                <column name="country"/>
+            </basic>
+            <basic name="latitude">
+                <column name="latitude"/>
+            </basic>
+            <basic name="longitude">
+                <column name="longitude"/>
+            </basic>
+            <basic name="startDate">
+                <column name="start_date"/>
+            </basic>
+            <basic name="endDate">
+                <column name="end_date"/>
+            </basic>
+            <basic name="dateCreated">
+                <column name="date_created"/>
+            </basic>
+            <basic name="voided">
+                <column name="voided"/>
+            </basic>
+            <basic name="dateVoided">
+                <column name="date_voided"/>
+            </basic>
+            <basic name="voidReason">
+                <column name="void_reason"/>
+            </basic>
+            <basic name="countyDistrict">
+                <column name="county_district"/>
+            </basic>
+            <basic name="address3">
+                <column name="address3"/>
+            </basic>
+            <basic name="address4">
+                <column name="address4"/>
+            </basic>
+            <basic name="address5">
+                <column name="address5"/>
+            </basic>
+            <basic name="address6">
+                <column name="address6"/>
+            </basic>
+            <basic name="dateChanged">
+                <column name="date_changed"/>
+            </basic>
+            <basic name="uuid">
+                <column name="uuid"/>
+            </basic>
+            <basic name="address7">
+                <column name="address7"/>
+            </basic>
+            <basic name="address8">
+                <column name="address8"/>
+            </basic>
+            <basic name="address9">
+                <column name="address9"/>
+            </basic>
+            <basic name="address10">
+                <column name="address10"/>
+            </basic>
+            <basic name="address11">
+                <column name="address11"/>
+            </basic>
+            <basic name="address12">
+                <column name="address12"/>
+            </basic>
+            <basic name="address13">
+                <column name="address13"/>
+            </basic>
+            <basic name="address14">
+                <column name="address14"/>
+            </basic>
+            <basic name="address15">
+                <column name="address15"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

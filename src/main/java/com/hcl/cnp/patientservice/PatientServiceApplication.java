@@ -21,13 +21,14 @@ public class PatientServiceApplication {
 		SpringApplication.run(PatientServiceApplication.class, args);
 	}
 
-	@Bean
-	PatientRepository repository() {
-		PatientRepository repository = new PatientRepository();
-		repository.add(new Patient(null, "Jose", "Boucourt"));
-		repository.add(new Patient(null, "Ben", "Winston"));
-		repository.add(new Patient(null, "Anil", "Grupta"));
-
-		return repository;
-	}
+	//Fake data
+//	@Bean
+//	PatientRepository repository() {
+//		PatientRepository repository = new PatientRepository();
+//		repository.add(new Patient(null, "Jose", "Boucourt"));
+//		repository.add(new Patient(null, "Ben", "Winston"));
+//		repository.add(new Patient(null, "Anil", "Grupta"));
+//
+//		return repository;
+//	}
 }

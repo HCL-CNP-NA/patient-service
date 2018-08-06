@@ -1,6 +1,7 @@
 package com.hcl.cnp.patientservice.rest;
 
 import com.hcl.cnp.patientservice.domain.Patient;
+import com.hcl.cnp.patientservice.domain.PatientEntity;
 import com.hcl.cnp.patientservice.service.PatientService;
 import com.hcl.cnp.patientservice.service.client.ObservationServiceClient;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,9 +28,9 @@ public class PatientResource {
         return "Patient service working";
     }
 
-    @GetMapping(path = "/find-all")
-    public List<Patient> findAll() {
-        return patientService.findAll();
+    @GetMapping(path = "/find-all-fake")
+    public List<Patient> findAllFake() {
+        return patientService.findAllFake();
     }
 
     @GetMapping(path = "/find-one/{id}")
@@ -42,6 +43,11 @@ public class PatientResource {
         Patient patient = patientService.findById(id).stream().findFirst().get();
         patient.setObservations(observationServiceClient.findByPatient(id));
         return patient;
+    }
+
+    @GetMapping(path = "/find-all")
+    public List<PatientEntity> findAll() {
+        return patientService.findAll();
     }
 
 }

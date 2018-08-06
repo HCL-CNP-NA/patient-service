@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.hcl.cnp.patientservice.domain.PatientIdentifierTypeEntity">
+        <table name="patient_identifier_type" schema="openmrs" catalog=""/>
+        <attributes>
+            <id name="patientIdentifierTypeId">
+                <column name="patient_identifier_type_id"/>
+            </id>
+            <basic name="name">
+                <column name="name"/>
+            </basic>
+            <basic name="description">
+                <column name="description"/>
+            </basic>
+            <basic name="format">
+                <column name="format"/>
+            </basic>
+            <basic name="checkDigit">
+                <column name="check_digit"/>
+            </basic>
+            <basic name="dateCreated">
+                <column name="date_created"/>
+            </basic>
+            <basic name="required">
+                <column name="required"/>
+            </basic>
+            <basic name="formatDescription">
+                <column name="format_description"/>
+            </basic>
+            <basic name="validator">
+                <column name="validator"/>
+            </basic>
+            <basic name="locationBehavior">
+                <column name="location_behavior"/>
+            </basic>
+            <basic name="retired">
+                <column name="retired"/>
+            </basic>
+            <basic name="dateRetired">
+                <column name="date_retired"/>
+            </basic>
+            <basic name="retireReason">
+                <column name="retire_reason"/>
+            </basic>
+            <basic name="uuid">
+                <column name="uuid"/>
+            </basic>
+            <basic name="uniquenessBehavior">
+                <column name="uniqueness_behavior"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entity-mappings xmlns="http://java.sun.com/xml/ns/persistence/orm"
+        version="2.0">
+
+    <entity class="com.hcl.cnp.patientservice.domain.AllergyEntity">
+        <table name="allergy" schema="openmrs" catalog=""/>
+        <attributes>
+            <id name="allergyId">
+                <column name="allergy_id"/>
+            </id>
+            <basic name="nonCodedAllergen">
+                <column name="non_coded_allergen"/>
+            </basic>
+            <basic name="allergenType">
+                <column name="allergen_type"/>
+            </basic>
+            <basic name="comment">
+                <column name="comment"/>
+            </basic>
+            <basic name="dateCreated">
+                <column name="date_created"/>
+            </basic>
+            <basic name="dateChanged">
+                <column name="date_changed"/>
+            </basic>
+            <basic name="voided">
+                <column name="voided"/>
+            </basic>
+            <basic name="dateVoided">
+                <column name="date_voided"/>
+            </basic>
+            <basic name="voidReason">
+                <column name="void_reason"/>
+            </basic>
+            <basic name="uuid">
+                <column name="uuid"/>
+            </basic>
+        </attributes>
+    </entity>
+</entity-mappings>
