@@ -22,7 +22,7 @@ of the business logic and the clients for the communication with other microserv
  
  In this package(resource) we have all the configuration file of the application. The way SpringBoot work is using
  **bootstrap.yml** and **application.yml** to find the configuration to start the app. Also we have a folder named **xml**, 
- here we going to save the xml files of the generated entities and for persistence configuration of JPA.  
+ here we going to save the xml files of the generated entities and for persistence configuration of JPA. The file **xml/persistence/orm.xml/orm.xml** contain configuration for JPA.
 
 <img width="400" alt="springboot-petclinic" src="./images/ProjectStructureResource.png">
  
