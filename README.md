@@ -6,7 +6,7 @@ This microservices is to handle the logic of the patient in the OpenMRS migratio
 The main structure of the app is inside of **src/main**. There we going to put all the java classes, entities, 
 services, resources, etc. In the **./test** we are going to have all the test we need to make for the app.
 
-<img width="782" alt="springboot-petclinic" src="./images/ProjectStructure.png">
+<img width="300" alt="springboot-petclinic" src="./images/ProjectStructure.png">
 
 ### Java Structure
 
@@ -16,7 +16,7 @@ we need to extend from JpaRepository. The package **rest** contain all the Sprin
 web service our api is going to have. The service layer is inside the **service** package, there we have implementation 
 of the business logic and the clients for the communication with other microservices.
 
-<img width="782" alt="springboot-petclinic" src="./images/ProjectStructureJava.png">
+<img width="300" alt="springboot-petclinic" src="./images/ProjectStructureJava.png">
  
  ### Resource Structure
  
