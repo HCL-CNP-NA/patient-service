@@ -16,7 +16,7 @@ we need to extend from JpaRepository. The package **rest** contain all the Sprin
 web service our api is going to have. The service layer is inside the **service** package, there we have implementation 
 of the business logic and the clients for the communication with other microservices.
 
-<img width="782" alt="springboot-petclinic" src="./images/ProjectStructureJava.png">
+<img width="300" alt="springboot-petclinic" src="./images/ProjectStructureJava.png">
  
  ### Resource Structure
  
