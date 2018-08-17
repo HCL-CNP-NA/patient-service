@@ -116,3 +116,10 @@ After done that, now we have to tell Intellij IDEA that we are using the ORM Hib
     for your pojo is invalid. Just change it to the one you need and you are ready to go!
     
  <img width="400" alt="springboot-petclinic" src="./images/Persistence+GenerateByDB.png">
+
+
+Now select the entities you want to generate the POJO. Select the package when you'r going to save
+the generated entities. A suffix for the entities in case tou want and be sure the check the option
+**Generate JPA Annotations(Java5)**
+
+ <img width="400" alt="springboot-petclinic" src="./images/ImportDB_Schema.png">
