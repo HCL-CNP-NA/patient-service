@@ -81,7 +81,7 @@ of the business logic and the clients for the communication with other microserv
        
 ## Create entities from DB using Intellij IDEA
 
-To create the entities from the DB, you have fist to add the DB connection into the Intellij IDEA. Select which
+To create the entities from the DB, you have to first add the DB connection into the Intellij IDEA. Select which
 Data source you going to use and fill the driver information(Also have to add the jdbc dependency to the pom).
 
 <img width="400" alt="springboot-petclinic" src="./images/DB_Intellij.png">
